@@ -35,7 +35,7 @@ const assets = [
   },
 ]
 
-export const baseClient = createPublicClient({
+const baseClient = createPublicClient({
   chain: base,
   transport: http(),
 })
