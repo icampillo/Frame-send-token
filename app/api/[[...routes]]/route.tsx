@@ -19,7 +19,7 @@ type FrogOptions = {
 
 export type CustomTransactionContext = TransactionContext<FrogOptions>
 
-export const assets = [
+const assets = [
   {
     name: '$HIGHER',
     network: 'base',
