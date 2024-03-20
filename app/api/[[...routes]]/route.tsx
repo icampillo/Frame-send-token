@@ -181,7 +181,6 @@ app.frame("/:network/:token", async (c) => {
   // } 
 
   return c.res({
-    action: '/',
     image: (
       <div
         style={{
@@ -238,9 +237,9 @@ app.transaction('/tx', async (c) => {
     buyTokenPercentageFee: '0.01',
   }).toString()
 
-  // const res = await fetch(baseUrl + params, {
-  //   headers: { '0x-api-key': c.env.ZEROX_API_KEY || '' },
-  // })
+  const res = await fetch(baseUrl + params, {
+    headers: { '0x-api-key': process.env.ZEROX_API_KEY || '' },
+  })
 
   const order = (await res.json()) as ZeroXSwapQuote
 
