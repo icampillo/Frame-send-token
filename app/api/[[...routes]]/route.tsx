@@ -40,7 +40,7 @@ const baseClient = createPublicClient({
   transport: http(),
 })
 
-const account = privateKeyToAccount((process.env.PRIVATE_KEY as `0x`) || "");
+// const account = privateKeyToAccount((process.env.PRIVATE_KEY as `0x`) || "");
 
 const walletClient = createWalletClient({
   account,
