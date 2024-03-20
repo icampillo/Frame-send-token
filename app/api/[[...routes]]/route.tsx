@@ -4,14 +4,13 @@ import { Button, Frog, TextInput } from 'frog'
 // import { neynar } from 'frog/hubs'
 import { handle } from 'frog/next'
 
-import img from "./degen.png"
+import img from "../../../public/degen.png"
 
 import { baseSepolia } from "viem/chains";
 import { getContract } from 'viem';
 import { privateKeyToAccount } from "viem/accounts";
-import { createWalletClient, http, createPublicClient, parseEther } from "viem";
+import { createWalletClient, http, parseEther } from "viem";
 // import abi from './abi.json';
-
 const account = privateKeyToAccount((process.env.PRIVATE_KEY as `0x`) || "");
 
 const walletClient = createWalletClient({
