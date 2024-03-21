@@ -1,3 +1,6 @@
+This frame allow user to claim eth tesnet token on base sepolia and swap eth to other token.
+
+
 ```
 npm install
 npm run dev
