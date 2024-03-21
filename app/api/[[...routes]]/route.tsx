@@ -42,11 +42,11 @@ const baseClient = createPublicClient({
 
 // const account = privateKeyToAccount((process.env.PRIVATE_KEY as `0x`) || "");
 
-const walletClient = createWalletClient({
-  account,
-  chain: baseSepolia,
-  transport: http(`https://base-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_APY}`),
-});
+// const walletClient = createWalletClient({
+//   account: "",
+//   chain: baseSepolia,
+//   transport: http(`https://base-sepolia.g.alchemy.com/v2/${process.env.ALCHEMY_APY}`),
+// });
 
 const app = new Frog({
   assetsPath: '/',
@@ -103,7 +103,7 @@ app.frame('/', (c) => {
 })
 
 app.frame("/claim", async (c) => {
-  const [address] = await walletClient.getAddresses()
+  // const [address] = await walletClient.getAddresses()
 
   // const hash = await walletClient.sendTransaction({ 
   //   account,
