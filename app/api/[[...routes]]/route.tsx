@@ -239,7 +239,7 @@ app.transaction('/tx', async (c) => {
   }).toString()
 
   const res = await fetch(baseUrl + params, {
-    headers: { '0x-api-key': process.env.ZEROX_API_KEY || '' },
+    headers: { '0x-api-key': "68ff9a04-0b89-4a14-8d0d-826fd439f81f"},
   })
 
   const order = (await res.json()) as ZeroXSwapQuote
